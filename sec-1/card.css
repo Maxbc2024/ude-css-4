@@ -1,0 +1,120 @@
+
+:root{
+    /* --color:#164ee2; */
+    --color: tomato;
+    /* --color: purple; */
+}
+
+body {
+    font-family: sans-serif;
+    background: #fafafa;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    line-height: 1.8rem;
+}
+
+/************************************/
+
+article.card{
+    background: white;
+    margin-bottom: 2rem;
+    box-shadow:0 7px 30px -10px rgba(150,170,180,0.5);
+
+    position: relative;
+}
+
+article.card:hover .title{
+    color: var(--color)
+}
+
+.card-body{
+    padding: 1rem;
+}
+
+h2{
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+
+
+.meta-info{
+    text-transform: uppercase;
+    font-size: 90%;
+    font-weight: 700;
+    color: #42465a;
+}
+
+.meta-info .author::after{
+    content: '-';
+    margin: 0 0.5rem;
+    color: #bbb;
+}
+
+.published-date{
+    color: var(--color)
+}
+
+.category{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: var(--color);
+    color: white;
+    padding: 0.2rem 1rem;
+    text-transform: uppercase;
+    font-size: 80%;
+    border-radius: 45px;
+    box-shadow:2px 2px 1px rgba(0,0,0,0.1);
+
+}
+
+/* ----------  > 768px  ----------- */
+@media (min-width: 768px){
+    /* body{
+        background-color: #000;
+    } */
+
+    main.cards{
+        display: flex;
+        /* los hijo que no entren se van para abajo */
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    /* https://developer.mozilla.org/es/docs/Web/CSS/flex */
+    article.card{
+        /* flex-grow | flex-shrink | flex-basis */
+        /* flex: 0 1 48%; */
+        /* flex: 0 1 calc(50%-1rem); */
+       
+        /* flex-grow (default=0) = espacio sobrante se distribuye */
+        flex-grow:0;
+        /* flex-shrink(default=1) = (1=encoge | 0=no encoge(toma su tamanio original)) */
+        flex-shrink:1;
+        /* flex-basis(default=auto) = da tamanio (con flex no hace caso al width y higth) */
+        /* 0 = el sobrante da el tamanio que va tener el hijo (igual proporcion sin importar el contenido(lo reduce))  */
+        flex-basis:48%;
+        /* flex-basis:calc(50%-1rem); */
+
+    }
+}
+
+/* ----------  > 992px  ----------- */
+
+@media (min-width: 992px){
+    article.card{
+        /* flex-grow | flex-shrink | flex-basis */
+        /* flex: 0 1 calc(33.33% - 1rem); */
+        
+        flex-grow:0;
+        flex-shrink:1;
+        flex-basis:calc(33.33% - 1rem);
+    } 
+}
