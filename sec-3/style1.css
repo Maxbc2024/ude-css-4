@@ -6,4 +6,99 @@
 
 body{
     font-family: "open sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    color: #333;
+    margin-top: 5rem;
+    padding: 1rem;
+}
+
+img{
+    width: 100%;
+}
+
+article{
+    max-width: 500px;
+    box-shadow: 0 8px 60px 0 rgb(103 151 255 / 11%), 0 12px 90px 0 rgb(103 151 255 / 11%);
+    padding: 1.5rem;
+    border-radius:10px;
+}
+
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    /* margin-bottom: 2rem; */
+    align-items: center;
+}
+
+.card-header-left{
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    gap: 0.8rem;
+}
+
+.card-header-left img{
+    border-radius: 100%;
+}
+
+.user-info .username{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.user-info .location{
+    font-size: 90%;
+    margin-top: 2px;
+}
+
+.card-body{
+    margin: 1rem 0;
+}
+
+.reactions{
+    margin-bottom: 1rem;
+}
+
+.card-footer .react{
+    display:  flex;
+    justify-content: space-between;
+}
+
+ion-icon{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.reactions-left ion-icon{
+    margin-right: 0.3rem;
+}
+
+.like-count{
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.view-all-comments{
+    margin-top: 1rem;
+    color: #999;
+    cursor: pointer;
+}
+
+.add-a-comment{
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    gap:1rem;   
+    margin-top: 1rem;
+    align-items: center;
+}
+
+.add-a-comment img{
+    border-radius: 100%;
+}
+
+.add-a-comment input{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
 }
