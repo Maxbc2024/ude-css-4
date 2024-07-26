@@ -17,12 +17,16 @@ img{
     width: 100%;
 }
 
+/* ------------------------------------------------------------ */
+
 article{
     max-width: 500px;
     box-shadow: 0 8px 60px 0 rgb(103 151 255 / 11%), 0 12px 90px 0 rgb(103 151 255 / 11%);
     padding: 1.5rem;
     border-radius:10px;
 }
+
+/* <!-- CARD HEADER ------------------ --> */
 
 .card-header{
     display: flex;
@@ -51,17 +55,23 @@ article{
     margin-top: 2px;
 }
 
+/* <!-- CARD BODY ------------------ --> */
+
 .card-body{
     margin: 1rem 0;
 }
 
-.reactions{
-    margin-bottom: 1rem;
-}
 
-.card-footer .react{
+/* <!-- CARD FOOTER ------------------ --> */
+
+.card-footer 
+.react{
     display:  flex;
     justify-content: space-between;
+}
+
+.reactions{
+    margin-bottom: 1rem;
 }
 
 ion-icon{
@@ -69,7 +79,8 @@ ion-icon{
     cursor: pointer;
 }
 
-.reactions-left ion-icon{
+.reactions-left 
+ion-icon{
     margin-right: 0.3rem;
 }
 

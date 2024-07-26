@@ -20,6 +20,12 @@ p {
     line-height: 1.8rem;
 }
 
+
+h2{
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
 /************************************/
 
 article.card{
@@ -34,15 +40,11 @@ article.card:hover .title{
     color: var(--color)
 }
 
+/* CARD BODY ----------------------------- */
+
 .card-body{
     padding: 1rem;
 }
-
-h2{
-    text-transform: capitalize;
-    cursor: pointer;
-}
-
 
 
 .meta-info{
@@ -53,6 +55,7 @@ h2{
 }
 
 .meta-info .author::after{
+    /* Genera rayita a lado derecho */
     content: '-';
     margin: 0 0.5rem;
     color: #bbb;
@@ -63,6 +66,7 @@ h2{
 }
 
 .category{
+    /* etiqueta  */
     position: absolute;
     top: 1rem;
     left: 1rem;

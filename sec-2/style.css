@@ -29,12 +29,16 @@ h1{
     color: #bbb;
 }
 
+/* --------------------QUOTES------------------------------ */
+
 .quotes{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     margin: 5rem 0;
     gap: 2.5rem;
 }
+
+/* ------------------QUOTE-------------------------------- */
 
 .quote{
     font-size: 20px;
@@ -74,6 +78,8 @@ h1{
     font-weight: bold;
 }
 
+/* BOTON-------------------- */
+
 .cta-btn{
     text-align: center;
 }
@@ -97,6 +103,9 @@ button span{
     text-transform: capitalize;
 }
 
+
+/* ------------------------ RESPONSIVE ---------------------- */
+
 /* --------- <= 992 ------------- */
 @media only screen and (max-width:992px){
     .quotes{
@@ -110,3 +119,5 @@ button span{
         grid-template-columns: 1fr;
     }
 }
+
+
