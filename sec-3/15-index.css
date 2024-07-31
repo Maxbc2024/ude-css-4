@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: #edf0f7;
+}
+
+section{
+    width: 20rem;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.notification header{
+    display: flex;
+    justify-content: space-between;
+    color: #aaa;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.notify-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.notify-body p{
+    margin-top: 0.4rem;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+input{
+    position: relative;
+    width: 50px;
+    height: 30px;
+    -webkit-appearance: none;
+    appearance: none;
+
+    background: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    transition: 0.3s;
+}
+
+input:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background: #eeeff3;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition: 0.3s;
+
+}
+
+input:checked:before{
+    background: #ec407a;
+    left: 20px;
+}
+
+input.second:checked:before{
+    background: #04CD97;
+}
+
+input.third:checked:before{
+    background: #5351FB;
+}

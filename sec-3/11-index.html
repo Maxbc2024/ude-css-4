@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="11-index.css">
+    <title>Click To Copy</title>
+</head>
+
+<body>
+    <h1>Click To Copy</h1>
+
+    <!-- Code Section-->
+    <section>
+
+        <h2>CSS:</h2>
+        
+        <textarea id="code" cols="30" rows="10" readonly>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            background: #ddd;
+        }
+        </textarea>
+
+        <button id="copyCodeBtn"><i class="fas fa-clone"></i></button>
+
+    </section>
+
+    <!-- Password Section -->
+    <section>
+
+        <h2>Password:</h2>
+
+        <textarea id="password" cols="1" rows="1" readonly>
+uw875c775cc@3#</textarea>
+
+        <button id="copyPasswordBtn"><i class="fas fa-clone"></i></button>
+    </section>
+
+    <script>
+
+        let code = document.getElementById("code");
+        let copyCodeBtn = document.getElementById("copyCodeBtn");
+
+        copyCodeBtn.addEventListener("click", ()=>{
+            code.select();
+            document.execCommand("copy");
+            copyCodeBtn.innerHTML = '<i class="fas fa-check-circle"></i>';
+        });
+
+
+        let password = document.getElementById("password");
+        let copyPasswordBtn = document.getElementById("copyPasswordBtn");
+
+        copyPasswordBtn.addEventListener("mouseover", ()=>{
+            password.select();
+            document.execCommand("copy");
+            copyPasswordBtn.innerHTML = '<i class="fas fa-check-circle"></i>';
+        });
+
+
+    </script>
+</body>
+
+</html>
+

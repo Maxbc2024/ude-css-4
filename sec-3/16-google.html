@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="16-google.css">
+    <title>Google Page Dark Mode</title>
+</head>
+<body class="light-theme">
+
+    <header>
+        <nav>
+            <ul>
+                <li class="mode"><i class="fas fa-adjust"></i></li>
+                <li>Gmail</li>
+                <li>Images</li>
+                <li><i class="fas fa-th"></i></li>
+                <li><a href="#">Sign in</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="logo">
+            <img src="imgs/16-index/google-logo.png" alt="">
+        </div>
+        <div class="search">
+            <i class="fas fa-search"></i>
+            <input type="text">
+        </div>
+        <div class="btns">
+            <button>Google Search</button>
+            <button>I'm Feeling Lucky</button>
+        </div>
+    </main>
+    
+    <script>
+        // function mode(){
+        //     document.body.classList.toggle("dark-theme");
+        // }
+
+        let themeSwitch = document.querySelector(".mode");
+        let darkMode = false;
+
+        themeSwitch.addEventListener("click", () => {
+            
+            if (darkMode == false) {
+                darkMode = true;
+                themeSwitch.innerHTML = '<i class="fas fa-sun"></i>';
+                document.body.classList.add("dark-theme");
+                document.body.classList.remove("light-theme");
+                return;
+            }
+            darkMode = false;
+            themeSwitch.innerHTML = '<i class="fas fa-adjust"></i>';
+            document.body.classList.add("light-theme");
+            document.body.classList.remove("dark-theme");
+
+        })
+    </script>
+</body>
+</html>

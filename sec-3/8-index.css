@@ -1,0 +1,265 @@
+:root{
+    --pm-color: #1D9BF0;
+    --pm-bg: #EBF5FE;
+}
+
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    background: aliceblue;
+}
+
+
+/* -------------------TWEET BOX----------------- */
+
+.tweet-box{
+    background: white;
+
+    box-shadow: 0px 0px 20px #00000010;
+
+    max-width: 600px;
+    width: 100%;
+
+    padding: 1rem;
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-columns: 60px 1fr;
+}
+
+/* left--------------------- */
+
+.left{
+    /* background-color: tomato; */
+}
+
+.avatar{
+    width: 60px;
+    border-radius: 100%;
+}
+
+/* right--------------------- */
+
+.tweet-box header{
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.6rem;
+
+    position: relative;
+    font-size: 18px;
+    margin-top: 0.5rem;
+}
+
+.tweet-input .placeholder{
+    position: absolute;
+    top: 1px;
+    font-size: 20px;
+    color: #536371;
+    padding-left: 0.5rem;
+}
+
+.tweet-input .input{
+    border: none;
+    outline: none;
+    padding-left: 0.5rem;
+    min-height: 120px;
+    word-break: break-all;
+    margin-bottom: 1rem;
+}
+
+.tweet-box .privacy{
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    color: var(--pm-color);
+    font-weight: 700;
+    cursor: pointer;
+
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+    transition: 0.2s ease;
+}
+
+.tweet-box .privacy:hover{
+    background: var(--pm-bg);
+}
+
+.privacy ion-icon{
+    margin-right: 0.3rem;
+}
+
+
+.tweet-box footer{
+    padding-top: 0.6rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.tweet-box ul.icons{
+    /* pone en una sola fila */
+    display: flex;
+}
+
+.tweet-box ul li{
+    list-style: none;
+    color: var(--pm-color);
+
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    transition: 0.2s ease;
+}
+
+.tweet-box ul li:hover{
+    background: var(--pm-bg);
+    cursor: pointer;
+}
+
+.tweet-box button{
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    background: var(--pm-color);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50px;
+
+    opacity: 0.5;
+    pointer-events: none;
+    margin-left: 0.5rem;
+    transition: 0.2s ease;
+}
+
+.tweet-box button:hover{
+    background: #198cd8;
+}
+
+.tweet-box .counter{
+    /* display: none; */
+    color: #333;
+    border-right: 1px solid #bbb;
+    padding: 0.6rem;
+    transition: 0.2s ease;
+}
+
+
+/* --------------------------------- TWEETS ------------------------------ */
+
+.tweets{
+    margin: 5rem 0;
+}
+
+.tweet{
+    box-shadow: 0px 0px 20px #00000010;
+    background: white;
+    max-width: 600px;
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 10px;
+
+    margin-bottom: 1rem;
+
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 0.6rem;
+    
+}
+
+/* header-------------------------------- */
+.tweet img.badge{
+    /* el check azul se achica */
+    width: 15px;
+}
+
+.tweet header{
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.tweet header p{
+    margin-left: 5px;
+    color: var( --pm-color);
+}
+/* main-------------------------------- */
+.tweet main{
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.tweet main img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* FOOTER -------------------------------- */
+
+.tweet main ol,
+.tweet main ul{
+    margin-left: 2rem;
+} 
+
+.tweet footer ul{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.tweet footer ul li{
+    list-style: none;
+    color: var( --pm-color);
+    font-weight: 300;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+}
+
+.tweet footer ul li ion-icon{
+    margin-right: 4px;
+}
+
+.tweet ion-icon.repeat{
+    /* El segundo icono se pone en vertical */
+    transform: rotate(90deg);
+}
+
+.tweet ion-icon.exit{
+     /* El cuarto icono se pone en vertical */
+    transform: rotate(-90deg);
+}
+
+
+
+/* --------------------- RESPONSIVE --------------------------------- */
+/* >= 600px */
+@media only screen and (max-width: 600px) {
+    body{
+        padding: 1rem;
+    }
+    
+    .tweet-box,
+    .tweet{
+        grid-template-columns: 35px 1fr;
+    }
+}
+
+
+
+
+
+
+

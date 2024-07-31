@@ -21,7 +21,7 @@ body{
 /* -------------------------------------------------- */
 
 section{
-    background-color: aqua;
+    /* background-color: aqua; */
 
     height: 100vh;
     display: grid;
@@ -29,9 +29,127 @@ section{
 }
 
 .timeline{
+    /* background-color: tomato; */
+
     position: relative;
 }
 
+.timeline ul li{
+    list-style: none;
+    background: #fff;
+
+    border-radius: 10px;
+    margin-bottom: 2rem;
+
+    box-shadow: 0 0 26px 0 rgb(0 0 0 / 7%);
+    cursor: pointer;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.timeline ul li:last-child{
+    margin-bottom: 0;
+}
+
+.timeline ul li:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.post-body{
+    padding: 15px;
+}
+
+.post-body .comments{
+    border-top: 1px solid rgba(0,0,0,0.065);
+    padding-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--pm-color);
+}
+
+.post-body h3{
+    padding-bottom: 10px;
+}
+
+
+/* --------------------- RESPONSIVE --------------------------------- */
+/* >= 768px */
+@media only screen and (min-width:768px){
+    .timeline ul li{
+        /* background-color: tomato; */
+        
+        width: 50%;
+        position: relative;
+
+        margin-bottom: var(--post-margin);
+    }
+
+    .timeline ul li:nth-child(odd){
+        /* odd = impares */
+        float: left;
+        clear: right;
+        /* espacio entre la linea y el lado izquierdo */
+        transform: translateX(-3rem);
+    }
+
+    .timeline ul li:nth-child(even){
+        /* even = pares */
+        float: right;
+        clear: left;
+        /* espacio entre la linea y el lado derecho */
+        transform: translateX(3rem);
+    }
+
+    .timeline::before{
+        /* crea la linea vertical */
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 2px;
+        background: rgba(0,0,0, 0.1);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .timeline ul li:after{
+        /* crea los puntos */
+        content: "";
+        position: absolute;
+        width: var( --dot-size);
+        height: var( --dot-size);
+        background-color: var(--pm-color);
+        border-radius: 100%;
+        top: 0;
+
+        transition: all 0.3s ease-in-out;
+    }
+
+    .timeline ul li:nth-child(odd):after{
+        /* odd = impares */
+        /* mueve a la izquierda */
+        right: -3rem;
+        transform: translate(50%, -50%);
+    }
+
+    .timeline ul li:nth-child(even):after{
+        /* even = pares */
+        /* mueve a la derecha */
+        left: -3rem;
+        transform: translate(-50%, -50%);
+    }
+
+    .timeline ul li:hover:after{
+        /* da color al punto */
+        background: tomato;
+    }
+
+}
 
 
 

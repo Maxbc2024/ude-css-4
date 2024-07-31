@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+:root{
+    --tt-background:#000;
+    --tt-color: #fff;
+}
+
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: aliceblue;
+}
+
+
+/* ----------------------------------------------------------- */
+
+
+article{
+    max-width: 600px;
+    background: white;
+    padding: 2rem;
+    box-shadow: 0px 0px 20px #00000010;
+    margin-bottom: 3rem;
+    border-radius: 10px;
+}
+
+h2{
+    margin-bottom: 1rem;
+}
+
+p{
+    line-height: 1.8rem;
+}
+
+.tooltip{
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip:after,
+.tooltip:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background: var(--tt-background);
+    transform: translate(-50%, -100%);
+    width: 200px;
+    height: auto;
+    transition: all 0.2s ease-in-out;
+}
+
+.tooltip:before{
+    content: attr(data-tooltip);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--tt-color);
+    padding: 10px;
+    border-radius: 5px;
+    top: -10px;
+    transform: translate(-50%, -100%) scale(0);
+    transform-origin: bottom;
+}
+
+.tooltip:after{
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, -150%) rotate(45deg) scale(0);
+}
+
+.tooltip:hover:before{
+    transform: translate(-50%, -100%) scale(1);
+}
+
+.tooltip:hover:after{
+    transform: translate(-50%, -150%) rotate(45deg) scale(1);
+}
+
+ion-icon{
+    color: dodgerblue;
+}

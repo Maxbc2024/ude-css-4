@@ -1,0 +1,64 @@
+:root{
+    --pm-color: #03FF85;
+    --bg-color:#002333;
+    --icon-color:#333;
+}
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    background: #f4f4f4;
+    padding: 4rem 1rem;
+}
+/* ---------------------------------------------------- */
+h1{
+    text-align: center;
+}
+
+section{
+    margin-top: 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+textarea{
+    margin-top: 1rem;
+    padding: 20px;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    background: var(--bg-color);
+    color: var(--pm-color);
+    resize: none;
+}
+
+textarea::-webkit-scrollbar{
+    display: none;
+}
+
+button{
+    position: absolute;
+    top: 2rem;
+    right: 0.5rem;
+
+    outline: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    background-color: var(--pm-color);
+    color: var(--icon-color);
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.fas{
+    font-size: 1.1rem;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="8-index.css">
+    <title>Timeline UI Design with CSS</title>
+</head>
+<body>
+
+    <!-- /* -------------------TWEET BOX----------------- */ -->
+
+    <section class="tweet-box">
+        <div class="left">
+            <img src="imgs/8-level/user-avatar.jpg" class="avatar" alt="Rahul Giri" title="Rahul Giri">
+        </div>
+
+        <div class="right">
+            <header>
+                <div class="tweet-input">
+                    <span class="placeholder">What's Happening?</span>
+                    <div class="input" contenteditable="true" spellcheck="false"></div>
+                </div>
+
+                <div class="privacy">
+                    <ion-icon name="earth"></ion-icon>
+                    <span>Everyone Can Reply</span>
+                </div>
+            </header>
+
+            <footer>
+                <ul class="icons">
+                    <li>
+                        <ion-icon name="scan"></ion-icon>
+                    </li>
+                    <li>
+                        <ion-icon name="location"></ion-icon>
+                    </li>
+                    <li>
+                        <ion-icon name="image"></ion-icon>
+                    </li>
+                    <li>
+                        <ion-icon name="happy"></ion-icon>
+                    </li>
+                    <li>
+                        <ion-icon name="person"></ion-icon>
+                    </li>
+                </ul>
+
+                <div class="contents">
+                    <span class="counter">10</span>
+                    <button>Tweet</button>
+                </div>
+            </footer>
+        </div>
+    </section>
+
+    <!-- /* --------------------------------- TWEETS ------------------------------ */ -->
+
+    <section class="tweets">
+
+        <article class="tweet">
+            <img src="imgs/8-level/user-avatar.jpg" class="avatar" alt="">
+
+            <div class="tweet-body">
+                <header>
+                    <h4>Rahul Giri <img src="imgs/8-level/badge.png" class="badge"></h4>
+                    <p>@rahulgirihq . Sep 2</p>
+                </header>
+
+                <main>
+                    <p>Yes! In your face, Gandhi! 🤳 👩‍❤️‍👨</p>
+                    <br>
+                    <p>No! The kind with looting and maybe starting a few fires! We don't have a brig. 🔥🔥</p>
+                    <br>
+                    <ol>
+                        <li>Then we'll go with that data file!</li>
+                        <li>Shinier than yours, meatbag.</li>
+                        <li>I'll get my kit!</li>
+                    </ol>
+                    <br>
+                    <img src="imgs/8-level/couple.png" alt="">
+                </main>
+
+                <footer>
+                    <ul>
+                        <li><ion-icon name="chatbubble-outline" class="chatbubble"></ion-icon> 47k</li>
+                        <li><ion-icon name="repeat-outline" class="repeat"></ion-icon> 13k</li>
+                        <li><ion-icon name="heart-outline" class="heart"></ion-icon> 127k</li>
+                        <li><ion-icon name="exit-outline" class="exit"></ion-icon> 985</li>
+                    </ul>        
+                </footer>
+            </div>
+        </article>
+
+        <article class="tweet">
+            <img src="imgs/8-level/user-avatar.jpg" class="avatar" alt="">
+
+            <div class="tweet-body">
+                <header>
+                    <h4>Rahul Giri <img src="imgs/8-level/badge.png" class="badge"></h4>
+                    <p>@rahulgirihq . Sep 2</p>
+                </header>
+
+                <main>
+                    ⚽⚽These old Doomsday Devices are dangerously unstable. I'll rest easier not knowing where they are.
+                    No, I'm Santa Claus! I wish! It's a nickel. Why yes! Thanks for noticing. Daylight and everything. 🔥
+                </main>
+
+                <footer>
+                    <ul>
+                        <li><ion-icon name="chatbubble-outline" class="chatbubble"></ion-icon> 1.6k</li>
+                        <li><ion-icon name="repeat-outline" class="repeat"></ion-icon> 768</li>
+                        <li><ion-icon name="heart-outline" class="heart"></ion-icon> 1.9k</li>
+                        <li><ion-icon name="exit-outline" class="exit"></ion-icon> 245</li>
+                    </ul>        
+                </footer>
+            </div>
+        </article>
+
+        <article class="tweet">
+            <img src="imgs/8-level/user-avatar.jpg" class="avatar" alt="">
+
+            <div class="tweet-body">
+                <header>
+                    <h4>Rahul Giri <img src="imgs/8-level/badge.png" class="badge"></h4>
+                    <p>@rahulgirihq . Sep 2</p>
+                </header>
+
+                <main>
+                    <p>Mr. & Mrs. Rahul Giri 🔥🔥🔥🔥🔥❤️❤️❤️❤️❤️</p>
+                    <br>
+                    <img src="imgs/8-level/rr.jpg" alt="">
+                </main>
+
+                <footer>
+                    <ul>
+                        <li><ion-icon name="chatbubble-outline" class="chatbubble"></ion-icon> 140k</li>
+                        <li><ion-icon name="repeat-outline" class="repeat"></ion-icon> 30k</li>
+                        <li><ion-icon name="heart-outline" class="heart"></ion-icon> 127k</li>
+                        <li><ion-icon name="exit-outline" class="exit"></ion-icon> 9k</li>
+                    </ul>        
+                </footer>
+            </div>
+        </article>
+
+    </section>
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
