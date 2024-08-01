@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="16-Image-Compare.css">
+    <title>Image Comparison Slider</title>
+</head>
+
+<body>
+
+    <main>
+        <!-- Images -->
+        <div class="images">
+            <div class="img1"></div>
+            <div class="img2"></div>
+        </div>
+
+        <!-- Comparison Slider -->
+        <div class="slider">
+            <div class="drag-line">
+                <span></span>
+            </div>
+            <input type="range" min="0" max="100" value="50">
+        </div>
+    </main>
+
+    <script>
+        const slider= document.querySelector(".slider input");
+        const img2= document.querySelector(".images .img2");
+        const dragLine= document.querySelector(".slider .drag-line");
+
+
+        slider.oninput= ()=>{
+            let sliderVal = slider.value;
+
+            dragLine.style.left= sliderVal+"%";
+            img2.style.width= sliderVal+"%";
+        }
+    </script>
+</body>
+
+</html>

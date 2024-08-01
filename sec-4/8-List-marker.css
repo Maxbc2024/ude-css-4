@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+:root {
+    --color: #03FF84;
+}
+
+body{
+    font-family: sans-serif;
+    max-width: 992px;
+    margin: 0 auto;
+    font-size: 1.4em;
+    margin-top: 2em;
+    margin-bottom: 8rem;
+}
+
+p{
+    line-height: 1.4;
+}
+
+
+/* +++++++++++++++++++++++++++++++ */
+/* #1. Drop Cap Styling */
+/* +++++++++++++++++++++++++++++++ */
+
+.dropcap p:first-child::first-letter{
+    font-family: serif;
+    float: left;
+    font-size: 300%;
+    color: var(--color);
+    margin: 10px 15px -13px 0;
+
+    border: 5px solid;
+    padding: 0.2rem 1rem;
+    line-height: 1;
+    border-radius: 5px;
+}
+
+/* +++++++++++++++++++++++++++++++ */
+/* #2. First Line Styling */
+/* +++++++++++++++++++++++++++++++ */
+
+.dropcap p:nth-child(2)::first-line{
+    background: yellow;
+    text-transform: capitalize;
+
+    font-family: 'Pacifico', cursive;
+    /* text-decoration: underline; */
+
+    text-indent: 50px;
+}
+
+/* +++++++++++++++++++++++++++++++ */
+/* #3. Pointer event Styling */
+/* +++++++++++++++++++++++++++++++ */
+
+a{
+    color: rgb(175, 174, 174);
+    text-decoration: none;
+
+    pointer-events: none;
+}
+
+a:after{
+    content: " ✖";
+    font-size: 80%;
+}
+
+/* +++++++++++++++++++++++++++++++ */
+/* #4. Conic Gradient Styling */
+/* +++++++++++++++++++++++++++++++ */
+.conic-gradient{
+    margin-top: 2rem;
+    display: flex;
+    gap: 5rem;
+    background: #f9f9f9;
+    padding: 2rem;
+}
+.conic-gradient .cg{
+    width: 200px;
+    height: 200px;
+    background: conic-gradient(
+        #8b22ff 0% 15%,
+        #ffc33b 15% 25%,
+        #000000 25% 60%,
+        var(--color) 60% 100%
+    );
+    border-radius: 100%;
+}
+
+/* +++++++++++++++++++++++++++++++ */
+/* #5. CH Unit */
+/* +++++++++++++++++++++++++++++++ */
+
+.ch-unit h2{
+    /* font-family: monospace; */
+    background: yellow;
+
+    /* display: inline; */
+    width: 24ch;
+    padding: 0 20px;
+}
+
+/* +++++++++++++++++++++++++++++++ */
+/* #6. Text Stroke Styling */
+/* +++++++++++++++++++++++++++++++ */
+
+.ch-unit h2{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px black;
+}
+
+/* +++++++++++++++++++++++++++++++ */
+/* #7. List Marker Styling */
+/* +++++++++++++++++++++++++++++++ */
+
+.list ul li::marker{
+    color: var(--color);
+    font-size: 2rem;
+    content: "✔ ";
+}
+
+.list ol li::marker{
+    font-family: 'Permanent Marker', cursive;
+    color: var(--color);
+    font-size: 2rem;
+}

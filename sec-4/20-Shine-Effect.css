@@ -1,0 +1,75 @@
+:root{
+    --bg-color: linear-gradient(90deg,#04b4ff,#00d8a1);
+    --bg-color: rgb(255,255,255,.5);
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(90deg,#04b4ff,#00d8a1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------------------------------------------------------------------- */
+
+.profile-card{
+    background: #eee;
+    padding: 2rem 4rem;
+    text-align: center;
+    margin-right: 4rem;
+    border-radius: 5px;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.12);
+}
+
+img{
+    width: 100%;
+    border-radius: 100%;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.12);
+}
+
+h2{
+    margin-bottom: 0;
+}
+
+h5{
+    margin-top: 0;
+    font-weight: 400;
+}
+
+.header{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.12);
+    border-radius: 100%;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.header:before{
+    content: "";
+    width: 180px;
+    height: 180px;
+    background: var( --bg-color);
+    /* background: black; */
+
+    position: absolute;
+    top: 0;
+    left: -245px;
+    transform: skew(-50deg);
+    transition: all 0.6s ease-in-out;
+}
+
+.header:hover:before{
+    left: 245px;
+}
+

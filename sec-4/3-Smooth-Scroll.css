@@ -1,0 +1,43 @@
+:root {
+    --color: #03FF84;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: sans-serif;
+    max-width: 992px;
+    margin: 0 auto;
+    font-size: 1.4em;
+    margin-top: 1em;
+    margin-bottom: 8rem;
+    scroll-snap-type: y mandatory;
+}
+
+p{
+    line-height: 1.4;
+}
+
+/* Main Styling */
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+section:target{
+    background: yellow;
+    padding: 1rem;
+}

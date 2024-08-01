@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Progress Scrollbar</title>
+    <link rel="stylesheet" href="2-Gradient-Scrollbar.css">
+</head>
+
+<body>
+    
+    <div id="progressBarContainer"></div>
+    
+    <div id="progressBar"></div>
+    
+
+    <h1>Welcome.</h1>
+
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+        provident eveniet veritatis ipsa id consectetur ab tenetur dolores eaque.
+        Temporibus laboriosam cum corporis amet doloremque animi aut ipsa ea a?
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+        provident eveniet veritatis ipsa id consectetur ab tenetur dolores eaque.
+        Temporibus laboriosam cum corporis amet doloremque animi aut ipsa ea a?
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+        provident eveniet veritatis ipsa id consectetur ab tenetur dolores eaque.
+        Temporibus laboriosam cum corporis amet doloremque animi aut ipsa ea a?
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+        provident eveniet veritatis ipsa id consectetur ab tenetur dolores eaque.
+        Temporibus laboriosam cum corporis amet doloremque animi aut ipsa ea a?
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+        provident eveniet veritatis ipsa id consectetur ab tenetur dolores eaque.
+        Temporibus laboriosam cum corporis amet doloremque animi aut ipsa ea a?
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+        provident eveniet veritatis ipsa id consectetur ab tenetur dolores eaque.
+        Temporibus laboriosam cum corporis amet doloremque animi aut ipsa ea a?
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+        provident eveniet veritatis ipsa id consectetur ab tenetur dolores eaque.
+        Temporibus laboriosam cum corporis amet doloremque animi aut ipsa ea a?
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+        provident eveniet veritatis ipsa id consectetur ab tenetur dolores eaque.
+        Temporibus laboriosam cum corporis amet doloremque animi aut ipsa ea a?
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+        provident eveniet veritatis ipsa id consectetur ab tenetur dolores eaque.
+        Temporibus laboriosam cum corporis amet doloremque animi aut ipsa ea a?
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+        provident eveniet veritatis ipsa id consectetur ab tenetur dolores eaque.
+        Temporibus laboriosam cum corporis amet doloremque animi aut ipsa ea a?
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+        provident eveniet veritatis ipsa id consectetur ab tenetur dolores eaque.
+        Temporibus laboriosam cum corporis amet doloremque animi aut ipsa ea a?
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+        provident eveniet veritatis ipsa id consectetur ab tenetur dolores eaque.
+        Temporibus laboriosam cum corporis amet doloremque animi aut ipsa ea a?
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+        provident eveniet veritatis ipsa id consectetur ab tenetur dolores eaque.
+        Temporibus laboriosam cum corporis amet doloremque animi aut ipsa ea a?
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+        provident eveniet veritatis ipsa id consectetur ab tenetur dolores eaque.
+        Temporibus laboriosam cum corporis amet doloremque animi aut ipsa ea a?
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+        provident eveniet veritatis ipsa id consectetur ab tenetur dolores eaque.
+        Temporibus laboriosam cum corporis amet doloremque animi aut ipsa ea a?
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+        provident eveniet veritatis ipsa id consectetur ab tenetur dolores eaque.
+        Temporibus laboriosam cum corporis amet doloremque animi aut ipsa ea a?
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+        provident eveniet veritatis ipsa id consectetur ab tenetur dolores eaque.
+        Temporibus laboriosam cum corporis amet doloremque animi aut ipsa ea a?
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+        provident eveniet veritatis ipsa id consectetur ab tenetur dolores eaque.
+        Temporibus laboriosam cum corporis amet doloremque animi aut ipsa ea a?
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+        provident eveniet veritatis ipsa id consectetur ab tenetur dolores eaque.
+        Temporibus laboriosam cum corporis amet doloremque animi aut ipsa ea a?
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+        provident eveniet veritatis ipsa id consectetur ab tenetur dolores eaque.
+        Temporibus laboriosam cum corporis amet doloremque animi aut ipsa ea a?
+    </p>
+    
+
+
+    <script>
+
+        const progressBar = document.querySelector("#progressBar");
+
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+
+        console.log(document.body.scrollHeight)
+        console.log(window.innerHeight)
+        console.log(totalHeight)
+
+        window.onscroll = ()=>{
+            let newProgressHeight = (window.pageYOffset/ totalHeight) * 100;
+            progressBar.style.height= `${newProgressHeight}%`;
+            progressBar.style.opacity= `${newProgressHeight}%`;
+
+            console.log(newProgressHeight)
+        }
+
+    </script>
+
+</body>
+
+</html>

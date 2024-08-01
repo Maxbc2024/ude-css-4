@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="24-1-Fullscreen-Overlay.css">
+    <title>Pure CSS Modal</title>
+</head>
+
+<body>
+
+    <section class="hero">
+
+        <div class="hero-left">
+            <h1>HELLO, I'm MR. Beast</h1>
+            <p>I'm a graphics designerand, and i share most valuble GD skills every week on my newsletter!</p>
+            
+            <!-- Modal button -->
+            <a href="#infopanel" class="open_modal"> Subscribe</a>
+
+        </div>
+        <div class="hero-right">
+            <img src="imgs/john.png" alt="John">
+        </div>
+
+    </section>
+
+    <!-- Modal -->
+    <div id="infopanel" class="modal">
+        <!-- Close button -->
+        <div class="close">
+            <a href="#">Close</a> 
+        </div>
+        <!-- modal content -->
+        <div class="content">
+            <!-- <img src="imgs/newsletter.png" alt="Newsltter"> -->
+            <img src="imgs/Mail-bro.png" alt="John">
+            <h2>Stay Up-To-Date With Our Newsletter</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+
+            <form class="form-control">
+                <input type="email" required placeholder="Enter Your Email">
+                <button class="btn">Subscribe</button>
+            </form>
+
+            
+        </div>
+    </div>
+</body>
+
+</html>

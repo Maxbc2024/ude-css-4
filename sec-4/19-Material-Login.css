@@ -1,0 +1,135 @@
+:root {
+    --primary-bg: #d16dff;
+    --text-color: #afafaf;
+}  
+
+html,
+body{
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+body{
+    color: white;
+    background: #000;
+    margin: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+
+/* -------------------------------------------------------------------------- */
+
+form{
+    width: 500px;
+}
+
+.input-field{
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid var(--primary-bg);
+    margin: 4rem auto 1rem;
+}
+
+label{
+    color: var(--text-color);
+    font-size: 1.5rem;
+
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    transform-origin: 0%;
+    transition: all 0.5s ease;
+}
+
+input{
+    width: 100%;
+    padding: 0.25rem 0;
+    background: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    margin: 0;
+}
+
+input:valid{
+    color: greenyellow;
+}
+
+input:invalid{
+    color: red;
+}
+
+.input-field:after{
+    content: "";
+    position: relative;
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: var(--primary-bg);
+    transform: scale(0);
+    transform-origin: 0%;
+    transition: transform 0.5s ease;
+    top: 2px;
+}
+
+.input-field:focus-within{
+    border-bottom: transparent;
+}
+
+.input-field:focus-within:after{
+    transform: scale(1);
+}
+
+.input-field:focus-within .label,
+input:not(:placeholder-shown) + .label{
+    transform: scaleX(0.8) translateY(-2rem);
+}
+
+input::placeholder{
+    color: transparent;
+}
+
+.showPass{
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+.forgot-pass{
+    margin-top: 2rem;
+}
+
+.forgot-pass a{
+    text-decoration: none;
+    font-style: italic;
+    opacity: 0.8;
+    color: var(--text-color);
+}
+
+button{
+    margin-top: 3rem;
+    background: var(--primary-bg);
+    width: 100%;
+    padding: 1rem;
+    color:white;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+@media (max-width:550px){
+    form{
+        width: 320px;
+    }
+}

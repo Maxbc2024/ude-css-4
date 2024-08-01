@@ -1,0 +1,73 @@
+body{
+    width: 60%;
+    margin: 0 auto;
+    font-family: sans-serif;
+    font-size: 150%;
+}
+section{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+p{
+    line-height: 3rem;
+}
+
+
+/* ----------------------------------------------------------------- */
+
+.img-circle{
+    width: 250px;
+    height: 250px;
+
+    shape-outside: circle(40%);
+    clip-path: circle(40%);
+    float: left;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    transition: all 0.3s ease;
+}
+
+.img-circle:hover{
+    width: 350px;
+    height: 350px;
+
+    shape-outside: circle(50%);
+    clip-path: circle(50%);
+}
+
+
+.img-ellipse{
+    shape-outside: ellipse(5rem 8rem);
+    clip-path: ellipse(5rem 8rem);
+    float: left;
+    margin-right: 1rem;
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+}
+
+.img-ellipse:hover{
+    shape-outside: ellipse(8rem 8rem);
+    clip-path: ellipse(8rem 8rem);
+}
+
+.male-parrot{
+    width: 405px;
+    height: 242px;
+    shape-outside: url("imgs/male-parrot.png");
+    background: url("imgs/male-parrot.png");
+    float: left;
+    shape-margin: 1rem;
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+}
+
+.male-parrot:hover{
+    width: 500px;
+    height: 295px;
+    shape-outside: url("imgs/ice-age-char.png");
+    background: url("imgs/ice-age-char.png");
+    float: left;
+    shape-margin: 1rem;
+    margin-top: 2rem;
+}

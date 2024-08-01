@@ -1,0 +1,149 @@
+:root{
+    --pm-color: pink;
+    --transition: all 0.3s;
+} 
+
+body{
+    max-width: min(996px, 100%);
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: "poppins",sans-serif;
+    font-weight: 400;
+    color: #42464a;
+}
+
+h1{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: dodgerblue;
+}
+
+/* ---------------------------------------------------------- */
+
+a.fade-in-underline{
+    border-bottom: 2px solid #fff;
+    transition: var(--transition);
+}
+
+a.fade-in-underline:hover{
+    border-bottom: 2px solid var(--pm-color);
+    transition: var(--transition);
+}
+
+a[class^="underline"]{
+    position: relative;
+}
+
+a[class^="underline"]:after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    border-bottom: 2px solid var(--pm-color);
+    transition: var(--transition);
+}
+
+a[class^="underline"]:hover:after{
+    transition: var(--transition);
+}
+
+a.underline-from-left:after{
+    right: 100%;
+    left: 0;
+}
+
+a.underline-from-left:hover:after{
+    right: 0%;
+}
+
+a.underline-from-right:after{
+    right: 0%;
+    left: 100%;
+}
+
+a.underline-from-right:hover:after{
+    left: 0%;
+}
+
+a.underline-from-center:after{
+    right: 50%;
+    left: 50%;
+}
+
+a.underline-from-center:hover:after{
+    left: 0%;
+    right: 0%;
+}
+
+/* background */
+
+a.fade-in-bg{
+    border-bottom: 2px dotted var(--pm-color);
+    padding: 0 0.25rem;
+    transition: var(--transition);
+}
+
+a.fade-in-bg:hover{
+    background: var(--pm-color);
+    color: white;
+    transition: var(--transition);
+}
+
+a[class^="slide"]{
+    line-height: 1.5rem;
+    padding: 0 0.25rem;
+    border-bottom: 2px dotted var(--pm-color);
+    position: relative;
+    display: inline-block;
+
+    overflow: hidden;
+    vertical-align: bottom;
+}
+
+a[class^="slide"]:hover{
+    border-bottom: 2px solid var(--pm-color);
+}
+
+
+a[class^="slide"]:after{
+   content: attr(data-linktext);
+   background: var(--pm-color);
+   color: white;
+
+   position: absolute;
+   display: block;
+   text-align: center;
+   transition: var(--transition);
+}
+
+a[class^="slide"]:hover:after{
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+ }
+
+ a.slide-from-left:after{
+     top: 0;
+     right: 100%;
+     left: -100%;
+ }
+
+ a.slide-from-right:after{
+    top: 0;
+    right: -100%;
+    left: 100%;
+}
+
+
+a.slide-from-top:after{
+    top: -100%;
+    bottom: 100%;
+}
+
+a.slide-from-bottom:after{
+    top: 100%;
+    bottom: -100%;
+}

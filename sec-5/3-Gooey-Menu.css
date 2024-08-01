@@ -1,0 +1,155 @@
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 140%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 1rem;
+    background: #36D1DC;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5b86e5, #36D1DC);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    line-height: 2rem;
+}
+
+a {
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    outline: none;
+    color: #5b86e5;
+    font-size: 1.2rem;
+    border-radius: 1px;
+    box-shadow: 0px 15px 20px #5b87e554;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+
+@media (max-width:768px) {
+    body {
+        background: #36D1DC;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #5B86E5, #36D1DC);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #5b86e5, #36D1DC);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    }
+}
+
+/* ------------------------------------------------- */
+
+
+.gooey-menu {
+    position: absolute;
+    right: 150px;
+    bottom: 50px;
+}
+
+[class*="fa-"] {
+    font-size: 30px;
+}
+
+.gooey-btn {
+    background: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    color: #5B86E5;
+
+    font-size: 30px;
+    text-align: center;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.gb1 {
+    z-index: 5;
+    cursor: pointer;
+}
+
+.gb1 span {
+    transform: translateY(-3px);
+   transition: all 0.5s ease;
+}
+
+
+.gb2 {
+    z-index: 4;
+    transition: all 0.5s ease;
+}
+
+.gb3 {
+    z-index: 3;
+    transition: all 0.55s ease;
+}
+
+.gb4 {
+    z-index: 2;
+    transition: all 0.6s ease;
+}
+
+.gb5 {
+    z-index: 1;
+    transition: all 0.65s ease;
+}
+
+.gb6 {
+   z-index: 0;
+   transition: all 0.7s ease;
+}
+
+.gooey-menu.open .gb1 span{
+   transform: rotate(45deg) translate(0, -3px);
+}
+
+.gooey-menu.open .gb2{
+   bottom: 80px;
+}
+.gooey-menu.open .gb3{
+   bottom: 160px;
+}
+
+.gooey-menu.open .gb4{
+   bottom: 240px;
+}
+.gooey-menu.open .gb5{
+   bottom: 320px;
+}
+
+.gooey-menu.open .gb6{
+   bottom: 400px;
+}
+

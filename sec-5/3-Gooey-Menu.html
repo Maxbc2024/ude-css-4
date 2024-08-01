@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="3-Gooey-Menu.css">
+  
+    <title>Gooey Menu</title>
+</head>
+
+<body>
+
+    <h1>Gooey Buttons</h1>
+    <p class="fadeIn wait-2s">Learn to build amazing gooey buttons with Rahul Giri.</p>
+    <a href="#" target="_blank" class="fadeIn wait-3s">Learn More</a>
+
+
+    <div id="gooey-menu" class="gooey-menu">
+        <div class="gooey-btn gb1" id="gb1"> <span>+</span> </div>
+        <div class="gooey-btn gb2"> <span><i class="fab fa-whatsapp"></i> </span> </div>
+        <div class="gooey-btn gb3"> <span><i class="fab fa-facebook-messenger"></i></span> </div>
+        <div class="gooey-btn gb4"> <span><i class="far fa-envelope"></i></span> </div>
+        <div class="gooey-btn gb5"> <span><i class="fab fa-instagram"></i></span> </div>
+        <!-- <div class="gooey-btn gb6"> <span><i class="fab fa-reddit-alien"></i></span> </div> -->
+    </div>
+
+    <script>
+        document.getElementById("gb1").addEventListener("click", toggleMenu);
+
+        function toggleMenu(){
+            let gooeyMenu = document.getElementById("gooey-menu");
+            gooeyMenu.classList.toggle("open");
+        }
+    </script>
+</body>
+
+</html>

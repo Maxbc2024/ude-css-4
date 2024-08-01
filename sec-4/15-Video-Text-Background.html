@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video In Text Background</title>
+</head>
+<link rel="stylesheet" href="15-Video-Text-Background.css">
+
+<body>
+    <section>
+        <video src="video.mp4" autoplay loop muted id="video"></video>
+        <h2>Video <br>In Text <br> <span>Background</span> </h2>
+    </section>
+
+    <script>
+        document.getElementById("video").addEventListener("loadedmetadata", function(){
+            this.currentTime = 5;
+        }, true);
+    </script>
+</body>
+
+</html>

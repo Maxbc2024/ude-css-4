@@ -1,0 +1,86 @@
+body{
+    font-family: arial;
+    display: grid;
+    place-content: center;
+}
+
+h1{
+    font-size: 6rem;
+}
+
+/* Portfolio Styles */
+.hero{
+    max-width: 1280px;
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+}
+p{
+    font-size: 130%;
+    line-height: 2rem;
+    color: #555;
+}
+
+button{
+    background: blue;
+    color: white;
+    outline: none;
+    border:none;
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+h2{
+    font-size: 4rem;
+    margin-top: 0;
+}
+
+.left{
+   align-self: center;
+}
+
+/* --------------------------------------------------------------------- */
+
+.first{
+    background: linear-gradient(to right, #fc5c7d, #6a82fb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.second{
+    background: linear-gradient(to right, #fc5c7d, #6a82fb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 4px 3px 0px white, 9px 8px 5px rgba(0,0,0,0.15);
+}
+
+.third{
+    background: url("woo.png");
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 4px 3px 0px rgb(106, 130, 251, 0.9);
+}
+
+.fourth{
+    background: url("https://media.giphy.com/media/oLAnVp6kysqsg/giphy.gif");
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.fifth{
+    background: linear-gradient(to right, #fc5c7d, #6a82fb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300%;
+    animation: bg-anime 5s infinite alternate;
+}
+
+@keyframes bg-anime{
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
+}
