@@ -85,6 +85,8 @@ ion-icon{
 }
 
 .like-count{
+    /* background-color: aquamarine; */
+    
     font-weight: bold;
     margin-top: 5px;
 }
